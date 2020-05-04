@@ -55,7 +55,6 @@
 ##' }
 bdp <- function(securities, fields, options=NULL, overrides=NULL,
                 verbose=FALSE, identity=defaultAuthentication(), con=defaultConnection()) {
-    if (any(duplicated(securities))) stop("Duplicated securities submitted.", call.=FALSE)
     bdp_Impl(con, securities, fields, options, overrides, verbose, identity)
 }
 
